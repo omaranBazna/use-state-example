@@ -1,8 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
-
+import { useState } from "react";
 function App() {
-  return <div></div>;
+  const [value, setValue] = useState("hello");
+  return (
+    <div
+      onClick={() => {
+        setValue("NO");
+      }}
+    >
+      {value}
+    </div>
+  );
 }
 
 export default App;
